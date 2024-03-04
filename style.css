@@ -1,0 +1,696 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243 244 246);
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+/* Container */
+.container {
+    max-width: 80rem;
+    margin: 0 auto 0 auto;
+}
+
+.container-title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+}
+
+.container-body {
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 0.2px;
+}
+
+.container-card {
+    flex-basis: 33%;  
+    background-color: #fff; 
+    padding: 0.75rem; 
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    min-height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #dcdde3;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.75rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: rgb(2 132 199); /* Tailwind CSS Sky 600 */
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-branding {
+    height: 3.75rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: rgb(30 41 59);
+    color: #fff;
+    height: 20rem;
+}
+
+.hero-sections {
+    display: flex;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 0 auto 0 auto;
+    padding: 1rem;
+}
+
+.hero-sections p {
+    letter-spacing: 0.5px;
+}
+
+.hero-left-section {
+    flex-basis: 50%;
+}
+
+.hero-left-section h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+.hero-right-section {
+    flex-basis: 50%;
+    border: 1px #fff solid;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+}
+
+.primary-btn {
+    background-color: rgb(125 211 252);
+    color: rgb(30 41 59);
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+}
+
+.primary-btn:hover {
+    background-color: rgb(186 230 253);
+}
+
+.secondary-btn {
+    background-color: rgb(15 23 42);
+    color: rgb(255, 255, 255);
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+}
+
+.secondary-btn:hover {
+    background-color: rgb(51 65 85);
+}
+
+/* Contact */
+.contact-body {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    border-radius: 1rem 0 0 1rem;
+    padding: 2rem;
+}
+
+.contact input, textarea{
+    padding: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+    border: rgb(209 213 219) 1px solid;
+    border-radius: 0.5rem;
+    color: rgb(75 85 99);
+}
+
+.contact textarea:focus-visible, input:focus-visible {
+    border: rgb(2 132 199) 2px solid;
+    border-radius: 10px;
+    outline: none;
+    color: rgb(75 85 99);
+}
+
+.contact textarea::placeholder, input::placeholder {
+    color: rgb(107 114 128);
+}
+
+.contact button {
+    background-color: rgb(15 23 42);
+    color: rgb(255, 255, 255);
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: rgb(51 65 85);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-basis: 40%;
+    padding: 2rem;
+    background-color: #0861a4;
+    border-radius: 0 1rem 1rem 0;
+    color: rgb(255, 255, 255);
+
+}
+
+.contact-info-box {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.contact-info-box a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.contact-info-box a:hover {
+    color: rgb(209 213 219);
+}
+
+.contact-info-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Trafic Signs */
+#all-traffic-signs {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.traffic-sign-box {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.sign-name {
+    font-weight: 500;
+    font-size: 14px;
+    color:#000;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.sign-image {
+    width: 100%;
+}
+
+/* Modala */
+#display-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-sign-img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20rem;
+}
+
+.sign-title {
+    text-align: center;
+}
+
+.sign-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #EEF;
+    border-radius: 3px;
+    border: 1px #CCF solid;
+    padding: 2px 5px;
+    max-width: fit-content;
+    margin: 0.5rem auto 0 auto;
+}
+
+.sign-content {
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.search-traffic-signs {
+    padding: 10px;
+    border: rgb(229 231 235) 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.search-traffic-signs:focus-visible {
+    border: rgb(2 132 199) 2px solid;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Quiz */
+#quiz-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-btn {
+    font-size: 23px;
+    text-transform: uppercase;
+    background-color: #065693;
+    border: none;
+    border-radius: 5px;
+    padding: 35px 60px 35px 60px;
+    letter-spacing: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+#start-btn:hover {
+    background-color: #0861a4;
+}
+
+#quiz-stats {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    height: 4rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.stats-box {
+    flex-basis: 33%;
+}
+
+.stats-timer {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+#correct-answer {
+    color: rgb(0, 128, 0);
+}
+
+#wrong-answer {
+    color: rgb(255, 0, 0);
+}
+
+#quiz-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#question {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.questions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    gap: 1rem;
+    margin: 0 1rem 0 1rem;
+}
+
+.btn-option {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    cursor: pointer;
+    height: 6em;
+    border: 1px solid rgb(199, 201, 215);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.btn-option:hover {
+    background-color: rgb(254, 227, 140);
+}
+
+.img-container {
+    order: 2;
+}
+
+#quiz-image {
+    width: 465px;
+}
+
+#quiz-result {
+    max-width: 60rem;
+    margin: 2rem auto 0 auto;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    color: rgb(255, 255, 255);
+}
+
+/* Page Heading */
+.page-heading {
+    max-width: 80rem;
+    margin: 1.5rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Footer */
+footer {
+    position: sticky;
+    top: 100vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    padding: 1rem;
+}
+
+footer span {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(107 114 128); /* Tailwind CSS Gray-500 */
+}
+
+footer span a {
+    text-decoration: none;
+    color: rgb(107 114 128);
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+.footer-elements {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.footer-elements ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    list-style: none;
+}
+
+.footer-elements ul a{
+    text-decoration: none;
+    color: rgb(107 114 128);
+}
+
+.footer-elements ul a:hover{
+    text-decoration: underline;
+}
+
+/* Medium */
+@media screen and (max-width: 768px)  {
+    /* Container */
+    .container-title {
+        margin: 1rem 1rem 0 1rem;
+        font-size: 1.75rem;
+    }
+
+    .container-body {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .page-heading {
+        margin: 1rem;
+    }
+    
+    /* Nav */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;    
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+    }
+    .hero-sections {
+        flex-direction: column;
+    }
+
+    .hero-left-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-right-section {
+        display: none;
+    }
+
+    /* Trafic Signs */
+    #all-traffic-signs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 1rem;
+    }
+
+    .questions-container {
+        flex-direction: column;
+    }
+
+    #options-container {
+        order: 2;
+    }
+
+    .img-container {
+        order: 1;
+    }
+
+    /* Trafic Sign Modal */
+    .modal-content {
+        width: fit-content;
+    }
+
+    #quiz-result {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    /* Contact */
+    .contact-body {
+        flex-direction: column;
+        padding: 0 1rem;
+
+    }
+
+    .contact {
+        border-radius: 1rem 1rem 0 0; 
+    }
+
+    .contact-info {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+/* Small */
+@media screen and (max-width: 576px) {
+    /* Traffic Signs */
+    #all-traffic-signs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 1rem;
+    }
+
+    .search-traffic-signs {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* Page Heading */
+    .page-heading {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Quiz */
+    #quiz-header h1 {
+        font-size: 26px;
+    }
+}
